@@ -11,9 +11,9 @@
 
       <h1>Find your spirit animal</h1>
 
-      <button onclick="newFunction()"> A hike and whitwater rafting</button>
-      <button onclick="newFunction()">Netflix and chill</button>
-      <button onclick="newFunction()">Wine and cheese in a cemetery</button>
+      <button onclick="newFunction(0)"> A hike and whitwater rafting</button>
+      <button onclick="newFunction(1)">Netflix and chill</button>
+      <button onclick="newFunction(2)">Wine and cheese in a cemetery</button>
 
 <div>
 
@@ -23,10 +23,12 @@
 </div>
 
 <script>
-function newFunction(){
-
-alert('my first function');
-document.getElementbyId("answer").=
+  function newFunction(param1){
+      textValue = param1;
+      var alertText = ['hike', 'netflix', 'wine']
+      alert(textValue);
+      console.log('testing');
+      document.getElementbyId("answer").innerHTML= "some text here";
 }
 
 </script>
