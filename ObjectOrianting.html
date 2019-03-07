@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+<style>
+
+body {
+	background-color: #FFF278;
+}
+
+
+canvas { border: 1px solid black; }
+
+</style>
+
+
+
+
+</head>
+
+
+<body>
+
+<button onclick="startLine()">click here</button>
+
+<canvas id="fillIt" width="400" height="400"></canvas>
+
+<button onclick="starLine()">click here</button>
+
+<canvas id="fillItObject" width="400" height="400></canvas>"
+
+
+<script>
+
+function startLine(){
+	setInterval(draw, 100);
+}
+
+var canvas = document.getElementById('fillIt');
+var ctx = canvas.getContext('2d');
+var startX = 0;
+
+var lineObject = {
+startX: 0;
+startY: 0;
+finishx: 0;
+finishY: 400;
+drawline: function() {
+    this.ctxbeginpath();
+    this.ctxmoveto(this.startX, this.startY);
+    ctx.lineTo(this.finishX, this.finishY);
+    //ctx.strokeStyle = 'rgba(255, 83, 13, 1)'
+    ctx.stroke();
+
+}
+
+<style
+
+
+
+
+}
+
+function lineObjC(startX, startY, finishX, finishY, context, bgC, strokeColor) {
+  this.startX = startX;
+  this.startY = startY;
+  this.finishX = finishX;
+  this.finishY = finishY;
+  this.context = context;
+  this.bgC = bgC;
+  this.strokecolor = strokeColor;
+  this.drawline = function() {
+      this.context.beginPath();
+      this.context.moveto(this.startX, this.startY);
+      this.context.lineTo(this.finishX, this.finishY);
+      this.context.strokeStyle = 'rgba(255, 83, 13, 1)'
+      this.context.stroke();
+
+}
+
+this.eraseLine = function( {
+  this.context.beginPath();
+  this.context.moveto(this.startX, this.startY);
+  this.context.lineTo(this.finishX, this.finishY);
+  this.context.strokeStyle = this.strokeColor;
+  this.context.stroke();
+
+}
+}
+
+var line1 = new lineObjC(10,0,10,400,ctx2,,'#FFF278',"rgba(255, 83, 13, 1)");
+
+
+
+
+function draw() {
+	if (startX <= canvas.width) {
+		ctx.beginPath();
+		ctx.moveTo(startX, 0);
+		ctx.lineTo(startX, 400);
+		ctx.strokeStyle = 'rgba(255, 83, 13, 1)';
+		ctx.stroke();
+		startX = startX + 1
+	}
+}
+
+
+</script>
+
+
+</body>
+</html>
