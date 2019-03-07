@@ -1,42 +1,63 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-body {
-	background-color: #FFF222;
+.slidecontainer {
+  width: 100%;
 }
 
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
 </style>
-
 </head>
-
 <body>
 
-	<center>
+<h1>Custom Range Slider</h1>
+<p>Drag the slider to display the current value.</p>
 
-	<h1>Kaleidoscope</h1>
-
-	<button id="refresh" onclick="refresh()" value="0">Refresh</button>
-
-	<div id="moodStatement">Happy!</div>
-
-</center>
-
-
-<div class="reveal-slider">
-  <div class="box-itself">
-    <div class="sliding">
-      <span class="sliding-left"></span>
-      <span class="sliding-right"></span>
-    </div>
-    <div class="content content-left"><div style="https://www.irishtimes.com/life-and-style/food-and-drink/now-we-know-can-i-eat-an-apple-from-the-ground-1.3639446)"></div></div>
-    <div class="content content-right"><div style="https://www.sweethomeor.gov/sites/default/files/imageattachments/executive/page/5056/water_long.jpg)"></div></div>
-  </div>
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p>Value: <span id="demo"></span></p>
 </div>
-<!-- Slide bar by moving mouse.. -->
 
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
 
 </body>
 </html>
