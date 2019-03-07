@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+<style>
+
+body {
+	background-color: #FFF222;
+}
+
+</style>
+
+</head>
+
+<body>
+
+	<center>
+
+	<h1>Kaleidoscope</h1>
+
+	<button id="refresh" onclick="refresh()" value="0">Refresh</button>
+
+	<div id="moodStatement">Happy!</div>
+
+</center>
+
+
+<script>
+
+
+  Draggable.create(".scrub", {type:"x", edgeResistance:1, bounds:".slider"});
+  // we are done at this point
+
+  // output the value
+  TweenMax.to(this, 1, {alpha:1, onUpdate:update, repeat:-1});
+  function update() {
+    $('#xpos').val( $('.scrub').position().left + 'px' );
+    $('#percentage').val( Math.round( $('.scrub').position().left*1000 / 2720 ) + '%' );
+  }
+
+
+</script>
+</body>
+</html>
