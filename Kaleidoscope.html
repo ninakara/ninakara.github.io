@@ -25,20 +25,31 @@ body {
 </center>
 
 
+<script>
 
+function mover(pos,full) {
+  let shrink = full - pos;
+  let sliding = document.getElementsByClassName('sliding')[0];
+     sliding.setAttribute("style", "left:" + pos + "px");
+  let contentLeft = document.getElementsByClassName('content-left')[0];
+     contentLeft.setAttribute("style", "width:" + pos + "px");
+  let contentRight = document.getElementsByClassName('content-right')[0];
+     contentRight.setAttribute("style", "width:" + shrink + "px");
+}
+const cont = document.getElementsByClassName('box-itself')[0];
+  cont.addEventListener('mousemove', function(e) {
+      let mousePosition = e.clientX;
+      let fullWidth = cont.offsetWidth;
+      mover(mousePosition,fullWidth);
+  });
+  // touchscreen handling
+  cont.addEventListener('touchmove', function(e) {
+      let mousePosition = e.changedTouches[0].pageX;
+      let fullWidth = cont.offsetWidth;
+      mover(mousePosition,fullWidth);
+  });
 
-  <div class="center">
-
-    <div class="slider">
-      <div class="scrub">•</div>
-    </div>
-
-
-    <input id="xpos" class="output" type="text" value="0">
-    <input id="percentage" class="output" type="text" value="100">
-
-  </div>
-
+</script>
 
 
 </body>
