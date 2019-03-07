@@ -25,31 +25,17 @@ body {
 </center>
 
 
-<script>
-
-function mover(pos,full) {
-  let shrink = full - pos;
-  let sliding = ground.jpg('sliding')[0];
-     sliding.setAttribute("style", "left:" + pos + "px");
-  let contentLeft = water_long.jpg('content-left')[0];
-     contentLeft.setAttribute("style", "width:" + pos + "px");
-  let contentRight = water_long.jpg('content-right')[0];
-     contentRight.setAttribute("style", "width:" + shrink + "px");
-}
-const cont = document.getElementsByClassName('box-itself')[0];
-  cont.addEventListener('mousemove', function(e) {
-      let mousePosition = e.clientX;
-      let fullWidth = cont.offsetWidth;
-      mover(mousePosition,fullWidth);
-  });
-  // touchscreen handling
-  cont.addEventListener('touchmove', function(e) {
-      let mousePosition = e.changedTouches[0].pageX;
-      let fullWidth = cont.offsetWidth;
-      mover(mousePosition,fullWidth);
-  });
-
-</script>
+<div class="reveal-slider">
+  <div class="box-itself">
+    <div class="sliding">
+      <span class="sliding-left"></span>
+      <span class="sliding-right"></span>
+    </div>
+    <div class="content content-left"><div style="background-image: url(https://raw.github.com/Recidvst/recidvst-images/master/mustang-old-min.jpg)"></div></div>
+    <div class="content content-right"><div style="background-image: url(https://raw.github.com/Recidvst/recidvst-images/master/mustang-old-inverted-min.jpg)"></div></div>
+  </div>
+</div>
+<!-- Slide bar by moving mouse.. -->
 
 
 </body>
