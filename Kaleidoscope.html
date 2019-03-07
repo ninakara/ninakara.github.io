@@ -29,11 +29,11 @@ body {
 
 function mover(pos,full) {
   let shrink = full - pos;
-  let sliding = document.getElementsByClassName('sliding')[0];
+  let sliding = ground.jpg('sliding')[0];
      sliding.setAttribute("style", "left:" + pos + "px");
-  let contentLeft = document.getElementsByClassName('content-left')[0];
+  let contentLeft = water_long.jpg('content-left')[0];
      contentLeft.setAttribute("style", "width:" + pos + "px");
-  let contentRight = document.getElementsByClassName('content-right')[0];
+  let contentRight = water_long.jpg('content-right')[0];
      contentRight.setAttribute("style", "width:" + shrink + "px");
 }
 const cont = document.getElementsByClassName('box-itself')[0];
