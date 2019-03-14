@@ -20,14 +20,14 @@ nextBtn.addEventListeners('click', () => {
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
-prevBtn.addEventListeners('click',() => {
+prevBtn.addEventListeners('click', () => {
     if (counter <=0) return;
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
 carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
-carouselSlide.addEventListener('transitionend',() => {
+carouselSlide.addEventListener('transitionend', () => {
     if (carouselImages[counter].id === 'lastClone') {
       carouselSlide.style.transition = "none";
       counter = carouselImages.length - 2;
