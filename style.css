@@ -21,21 +21,21 @@
 }
 
 #prevBtn{
-    position: absolute;
+    position:absolute;
     top: 50%
     z-index: 10;
     left: 5%
     font-size: 30px;
-    color: black;
+    color: pink;
     cursor: pointer;
 }
 
 #nextBtn{
-    position: absolute;
+    position:absolute;
     top: 50%
     z-index: 10;
     right: 5%
     font-size: 30px;
-    color: black;
+    color: pink;
     cursor: pointer;
 }
