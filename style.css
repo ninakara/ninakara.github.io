@@ -17,3 +17,25 @@
     height: 500px;
 
 }
+
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: pink;
+    cursor: pointer;
+
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: pink;
+    cursor: pointer;
+
+}
