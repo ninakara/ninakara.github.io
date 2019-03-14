@@ -9,12 +9,30 @@ const nextBtn = document.querySelector('#nextBtn');
 let counter = 1;
 const size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = 'translatex(' + (-size * counter) + 'px)';
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 //Button Listeners
 
 nextBtn.addEventListeners('click',()=>{
+    if(counter)
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
-carouselSlide.style.transform = 'translatex(' + (-size * counter) + 'px)';
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+prevBtn.addEventListeners('click',()=>{
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitioned',() => {
+    if(carouselImages[counter].id === 'lastClone') {
+      carouselSlide.style.transition = "none";
+      counter = carouselImages.length - 2;
+      carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+
+    }
+
 });
