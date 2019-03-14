@@ -21,7 +21,7 @@
 }
 
 #prevBtn{
-    position: absolute;
+    position: top;
     top: 50%
     z-index: 10;
     left: 5%
@@ -31,7 +31,7 @@
 }
 
 #nextBtn{
-    position: absolute;
+    position: top;
     top: 50%
     z-index: 10;
     right: 5%
