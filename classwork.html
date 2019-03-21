@@ -7,21 +7,17 @@
 
 <script>
 
-$( document ).ready(function(){
+$( document ).ready(function() {
 
-    $("p").click(function){
+    $("p").click(function) {
       alert("you have clicked a p tag");
       });
 
-    $( #yellow ).ready(function(){
+    $("#yellow").ready(function() {
       alert("you have clicked a p tag");
       });
 
-    $( "#.blue" ).ready(function(){
-      alert("you have clicked a p tag");
-      });
-
-    $( "#.blue" ).ready(function(){
+    $( "#.blue" ).ready(function() {
       alert("you have clicked a p tag");
       });
 
@@ -70,6 +66,11 @@ $( document ).ready(function(){
 <body>
 
 <p>Click Me</p>
+
+<p>Also click me</p>
+
+<div id="yellow">This is a yellow box</div>
+<div class="blue">This is a blue box</div>
 
 </body>
 </html>
