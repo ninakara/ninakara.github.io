@@ -11,13 +11,59 @@ $( document ).ready(function(){
 
     $("p").click(function){
       alert("you have clicked a p tag");
-    });
+      });
+
+    $( #yellow ).ready(function(){
+      alert("you have clicked a p tag");
+      });
+
+    $( "#.blue" ).ready(function(){
+      alert("you have clicked a p tag");
+      });
+
+    $( "#.blue" ).ready(function(){
+      alert("you have clicked a p tag");
+      });
+
 
 
 });
 
 </script>
 <style>
+
+#yellow {
+
+  padding: 5px;
+  text-align: center;
+  background-color: yellow;
+  border: solid 1px;
+
+}
+
+.blue {
+
+    padding: 5px;
+    text-align: center;
+    background-color: blue;
+    border: solid 1px;
+
+}
+
+
+.green {
+
+    padding: 5px;
+    text-align: center;
+    background-color: yellow;
+    border: solid 1px;
+    display: none;
+
+}
+
+
+
+
 
 </style>
 </head>
